@@ -1,0 +1,434 @@
+@font-face {
+    font-family: "shabnam";
+    src:local("shabnam"), url("../fonts/Shabnam-FD.woff2") ,format("woff2") ;
+}
+
+@media only screen and (max-width:700px){
+    .container{
+        max-width: 100%;
+        max-height: 100% ;
+        
+        
+        
+    }
+  
+    .picture3,.picture4{
+        object-fit: cover;
+        display: none;
+        max-width: 60px;
+        max-height: 40px;
+    }
+    .picture1,.picture2{
+        width: 45%;
+    }
+    .image-shoes{
+        object-fit: cover;
+        width: 40%;
+    
+    }
+    .top{
+   
+        width: 100%;
+        font-size: 14px;
+    }
+    .allShow{
+        font-size: 16px;
+    }
+    .main{
+        
+        width: 100%;
+        height: 100% ;
+        
+        flex-wrap: nowrap;
+        flex-direction: row;
+        flex-flow:nowrap ;
+
+    }
+    .bar{
+        display: none;
+        visibility: hidden;
+        
+    }
+    footer{
+        display: none;
+    }
+    
+}
+
+/* HTML: <div class="loader"></div> */
+/* .loader {
+    display: none;
+    width: 85px;
+    height: 50px;
+    --g1:conic-gradient(from  90deg at left   3px top   3px,#0000 90deg,#fff 0);
+    --g2:conic-gradient(from -90deg at bottom 3px right 3px,#0000 90deg,#fff 0);
+    background: var(--g1),var(--g1),var(--g1), var(--g2),var(--g2),var(--g2);
+    background-position: left,center,right;
+    background-repeat: no-repeat;
+    animation: l10 1s infinite alternate;
+  }
+  @keyframes l10 {
+    0%,
+    2%   {background-size:25px 50% ,25px 50% ,25px 50%}
+    20%  {background-size:25px 25% ,25px 50% ,25px 50%}
+    40%  {background-size:25px 100%,25px 25% ,25px 50%}
+    60%  {background-size:25px 50% ,25px 100%,25px 25%}
+    80%  {background-size:25px 50% ,25px 50% ,25px 100%}
+    98%,
+    100% {background-size:25px 50% ,25px 50% ,25px 50%}
+  } */
+*{
+    font-family: shabnam;
+}
+
+body.dark{
+    box-sizing: border-box;
+    background-image: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(18,14,5,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+    
+
+}
+body{
+    box-sizing: border-box;
+    background-image: linear-gradient(0deg, rgba(117,203,193,1) 0%, rgba(255,255,255,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.bar{
+    position: relative;
+    display: flex;
+    justify-content: right;
+    padding:0px 20px ;
+    overflow: hidden;
+    height: 50px;
+    text-align: center;
+    top: 0;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(39,144,93,1) 67%) ;
+    padding-top: 5px;
+
+    background-image: linear-gradient(35deg, rgba(117,203,193,.5) 0%, rgba(255,255,255,.5) 100%);
+    margin-top: -8px;
+    /* background-image:linear-gradient(0deg, rgba(218,218,218,1) 0%, rgba(52,249,255,1) 100%); */
+}
+
+
+.Nav1{
+    border-radius: 20px;
+    width: 60px;
+    position: absolute;
+    right: 0;
+    background-color: #6dbdb3;
+    color: black;
+    top: 0;
+    
+}
+.Nav2{
+    border-radius: 20px;
+    background-color: #76d0c5;
+    width: 60px;
+    right: 60px;
+    position: absolute;
+    color: black;
+    top: 0;
+    
+}
+.Nav3{
+    border-radius: 20px;
+    background-color: #7edfd3;
+    width: 60px;
+    right: 120px;
+    color: black;
+    top: 0;
+    
+    position: absolute;
+    
+}
+.Nav4{
+
+    background-color:#c8fff8;
+    width: 60px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    border-top-right-radius: 50%;
+
+
+}
+
+
+#basket{
+    object-fit: cover;
+    width: 40px;
+    filter: grayscale(4px);
+
+}
+.Nav1:hover{
+    transform: scale(1.1) ;
+    
+}
+.Nav2:hover{
+    transform: scale(1.1) ;
+   
+    
+
+}
+.Nav3:hover{
+    transform: scale(1.1) ;
+   ;
+   
+}
+
+.navTagsDiv{
+
+    padding-top: 13px;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transition: all 200ms ease-in-out 200ms;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+  
+
+
+}
+.navTags:hover{
+    color:black;
+    font-size: 13px;
+    white-space:wrap;
+}
+.navTags{
+    white-space: wrap;
+    transform: scale(.9);
+    font-size: 12px;
+    font-family: shabnam;
+    font-weight: bold;
+    color: #fff;;
+}
+
+.header.hidden{
+    display: block;
+}
+.header{
+  
+    position: relative;
+    max-width: 500px;
+    font-family: "shabnam";
+    text-align: center;
+    height: 50px;
+    /* background-color: #8EC8D1 ; */
+    /* border: 2px solid  rgb(126, 130, 130) ; */
+    border-radius: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 2px 2px 10px rgb(45, 45, 45);
+    padding: 2px;
+    margin-top: -58px;
+}
+
+.logo-sap{
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    right: 0;
+    width: 56px;
+    border-radius: 15px;
+    
+    
+}
+.image-of-head{
+    width: 100px;
+    height: 58px;
+    position: absolute;
+    border-radius: 10px;
+    right: 0;
+    top: 0;
+    margin-right: 0px;
+  
+}
+
+#help{
+    width: 30px;
+    height: 30px;
+    background-image: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(150,147,139,1) 96%);
+    border-radius: 100%;
+    box-shadow: 2px 2px 20px rgb(66, 66, 66);
+    
+    
+    
+}
+
+.list-of-items{
+    list-style-type: none;
+}
+#listItems{
+    width:max-content;
+    height:max-contentx;
+    border: 1px solid black;
+    border-radius: 10px; 
+    padding-right: 2px;
+    padding-left: 2px;
+}
+.itemss{
+    
+    width:max-content;
+    height:max-contentx;
+    background-image:  linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(150,147,139,1) 96%);
+    border-radius: 8px;
+    box-shadow: 2px 2px 20px rgb(66, 66, 66);
+    font-weight: bold;
+    padding-left: 20px;
+  
+
+}
+.itemss.hidden{
+    display:none ;
+}
+
+.container{
+    max-width: 80%;
+    height: 100vh;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+    /* background-color: #7a2e2e; */
+    font-family: "shabnam";
+    display: flex;
+    gap: 10px;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    overflow: scroll;
+
+
+}
+.sellerAfter{
+    margin-right: 20px;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0,.7);
+    border-radius: 8px;
+    max-width: 450px;
+    min-width: 320px;
+    height: 400px;
+    position:sticky;
+    top: 0;
+    transition: all 250ms ease 100ms;
+    background-color:rgba(72,205,189,.5);
+    opacity: .9;
+    text-align: center;
+    
+}
+.seller1{
+    margin-right: 20px;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0,.7);
+    border-radius: 8px;
+    max-width: 450px;
+    min-width: 320px;
+    height: 400px;
+    position:sticky;
+    top: 0;
+    transition: all 250ms ease 100ms;
+    background-image: url('https://ifncompany.ir/wp-content/uploads/2022/08/%D9%88%DB%8C%D8%AA%D8%B1%DB%8C%D9%86-%D9%85%D8%BA%D8%A7%D8%B2%D9%87-%D9%BE%D9%88%D8%B4%D8%A7%DA%A9-30.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .9;
+    transition: all 200ms ease-in-out 200ms;
+    
+}
+.seller2{
+    margin-right: 20px;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0,.7);
+    border-radius: 8px;
+    max-width: 450px;
+    min-width: 320px;
+    height: 400px;
+    position:sticky;
+    top: 0;
+    transition: all 250ms ease 100ms;
+    background-image: url('https://payatechgroup.com/wp-content/uploads/2024/02/%D8%AF%DA%A9%D9%88%D8%B1-%D8%A8%D9%88%D8%AA%DB%8C%DA%A9-%D9%85%D8%B1%D8%AF%D8%A7%D9%86%D9%87-5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .9;
+    transition: all 200ms ease-in-out 200ms;
+    
+}
+.seller3{
+    margin-right: 20px;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0,.7);
+    border-radius: 8px;
+    max-width: 450px;
+    min-width: 320px;
+    height: 400px;
+    position:sticky;
+    top: 0;
+    transition: all 250ms ease 100ms;
+    background-image: url('https://rocktehran.com/wp-content/uploads/2020/11/2-3.webp');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .9;
+    transition: all 200ms ease-in-out 200ms;
+}
+.seller1:hover,.seller2:hover,.seller3:hover{
+    transform: scale(1.2) translateY(30px);
+
+
+}
+.seller1Img{
+
+    max-width: 304px;
+    max-height: 200px;
+
+}
+.sellerTags{
+    font-size: 20px;
+    font-family: shabnam;
+    color: black;
+    font-weight:bold ;
+    text-indent: 2px;
+    text-align: center;
+    line-height: 400px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+a{
+    max-width: inherit;
+    white-space: nowrap;
+    font-size: 13px;
+    color: rgb(85, 84, 84);
+    text-decoration: none;
+    transition: all 250ms ease 100ms;
+}
+a:hover{
+    white-space: wrap;
+    color: black;
+    /* text-decoration: underline; */
+}
+
+.footer .email{
+    color: #165FB2;
+    text-decoration: none;
+    font-size: 16px;
+
+}
+footer{
+    border-radius: 8px;
+    box-shadow: 7px 7px 20px grey;
+    width: 100%;
+    max-height: 20%;
+    background-color:rgb(197, 197, 197,.5) ;
+    position: sticky;
+    bottom: 0;
+}
+.email:hover{
+    color: red;
+}
